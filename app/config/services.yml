@@ -1,0 +1,34 @@
+parameters:
+    abs.service.class: AppBundle\Services\AbsService
+    user.service.class: AppBundle\Services\UserService
+    carpooling.service.class: AppBundle\Services\CarpoolingService
+    compte.service.class: AppBundle\Services\CompteService
+    reservation.cp.service.class: AppBundle\Services\ReservationCpService
+#    mapper.entity.dto.class: AppBundle\Mapper\CarpoolingService
+    
+#    parameter_name: value
+
+services:
+    app.abs_service:
+        class: %abs.service.class%
+        abstract:  true
+        arguments: ["@doctrine.orm.entity_manager"]
+#        calls:
+#          - ["setContainer", ["@service_container"]]
+
+    app.user_service:
+        class: %user.service.class%
+        arguments: ["@doctrine.orm.entity_manager"]
+        parent: app.abs_service
+
+    app.carpooling_service:
+        class: %carpooling.service.class%
+        parent: app.abs_service
+
+    app.compte_service:
+        class: %compte.service.class%
+        parent: app.abs_service
+
+    app.reservation_cp_service:
+        class: %reservation.cp.service.class%
+        parent: app.abs_service

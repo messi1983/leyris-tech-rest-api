@@ -1,0 +1,18 @@
+app:
+    resource: '@AppBundle/Controller/DefaultController.php'
+    type: annotation
+
+users:
+    type:     rest
+    prefix:   /api
+    resource: AppBundle\Controller\UserController
+
+carpoolings:
+    type:     rest
+    prefix:   /api
+    resource: AppBundle\Controller\CarpoolingController
+
+reservations:
+    type:     rest
+    prefix:   /api
+    resource: AppBundle\Controller\ReservationCpController    
