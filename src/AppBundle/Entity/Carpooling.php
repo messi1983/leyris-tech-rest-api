@@ -78,7 +78,7 @@ class Carpooling extends AbstractEntity
     private $comment;
     
     /**
-     * @ORM\OneToOne(targetEntity="AppBundle\Entity\OffreCp", cascade={"persist", "merge"}, inversedBy="carpooling")
+     * @ORM\OneToOne(targetEntity="AppBundle\Entity\RestrictionCp", cascade={"persist", "merge"}, inversedBy="carpooling")
      */
     private $offreEmise;
     
@@ -378,11 +378,11 @@ class Carpooling extends AbstractEntity
     /**
      * Set offreEmise
      *
-     * @param \AppBundle\Entity\OffreCp $offreEmise
+     * @param \AppBundle\Entity\RestrictionCp $offreEmise
      *
      * @return Carpooling
      */
-    public function setOffreEmise(\AppBundle\Entity\OffreCp $offreEmise = null)
+    public function setOffreEmise(\AppBundle\Entity\RestrictionCp $offreEmise = null)
     {
         $this->offreEmise = $offreEmise;
 
@@ -392,7 +392,7 @@ class Carpooling extends AbstractEntity
     /**
      * Get offreEmise
      *
-     * @return \AppBundle\Entity\OffreCp
+     * @return \AppBundle\Entity\RestrictionCp
      */
     public function getOffreEmise()
     {

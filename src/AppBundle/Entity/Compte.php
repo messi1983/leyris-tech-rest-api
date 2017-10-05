@@ -35,7 +35,7 @@ class Compte extends AbstractPulishedEntity
 	private $recherches;
 	
 	/**
-	 * @ORM\ManyToMany(targetEntity="AppBundle\Entity\OffreCp", inversedBy="destinataires")
+	 * @ORM\ManyToMany(targetEntity="AppBundle\Entity\RestrictionCp", inversedBy="destinataires")
 	 */
 	private $offreCpRecues;
 	
@@ -154,11 +154,11 @@ class Compte extends AbstractPulishedEntity
     /**
      * Add offreCpRecue
      *
-     * @param \AppBundle\Entity\OffreCp $offreCpRecue
+     * @param \AppBundle\Entity\RestrictionCp $offreCpRecue
      *
      * @return Compte
      */
-    public function addOffreCpRecue(\AppBundle\Entity\OffreCp $offreCpRecue)
+    public function addOffreCpRecue(\AppBundle\Entity\RestrictionCp $offreCpRecue)
     {
         $this->offreCpRecues[] = $offreCpRecue;
 
@@ -168,9 +168,9 @@ class Compte extends AbstractPulishedEntity
     /**
      * Remove offreCpRecue
      *
-     * @param \AppBundle\Entity\OffreCp $offreCpRecue
+     * @param \AppBundle\Entity\RestrictionCp $offreCpRecue
      */
-    public function removeOffreCpRecue(\AppBundle\Entity\OffreCp $offreCpRecue)
+    public function removeOffreCpRecue(\AppBundle\Entity\RestrictionCp $offreCpRecue)
     {
         $this->offreCpRecues->removeElement($offreCpRecue);
     }

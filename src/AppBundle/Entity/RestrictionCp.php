@@ -6,12 +6,12 @@ use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\Criteria;
 
 /**
- * OffreCp
+ * RestrictionCp
  *
  * @ORM\Table()
- * @ORM\Entity(repositoryClass="AppBundle\Entity\OffreCpRepository")
+ * @ORM\Entity(repositoryClass="AppBundle\Entity\RestrictionCpRepository")
  */
-class OffreCp
+class RestrictionCp
 {   
 	/**
 	 * @var integer

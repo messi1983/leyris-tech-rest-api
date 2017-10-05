@@ -6,7 +6,7 @@ use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use AppBundle\Constants\ConstClasses;
 use AppBundle\Entity\Trajet;
-use AppBundle\Entity\OffreCp;
+use AppBundle\Entity\RestrictionCp;
 use AppBundle\DataFixtures\Outils\DataFixureOutils;
  
 class Carpoolings extends AbstractDataFixure implements OrderedFixtureInterface
@@ -37,10 +37,10 @@ class Carpoolings extends AbstractDataFixure implements OrderedFixtureInterface
   	//=======================================================================
   	// Offres
   	//=======================================================================
-  	$offreParisMarseille1 = new OffreCp();
+  	$offreParisMarseille1 = new RestrictionCp();
   	$offreParisMarseille1->setDateValidite($dateValiditeOffreParisMarseille1);
   	
-  	$offreParisMarseille2 = new OffreCp();
+  	$offreParisMarseille2 = new RestrictionCp();
   	$offreParisMarseille2->setDateValidite($dateValiditeOffreParisMarseille2);
   	
   	//=======================================================================
